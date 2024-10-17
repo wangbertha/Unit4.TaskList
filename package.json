@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "This backend allows users to manage their workload. After making an account, a user will be able to create, read, update, and delete their tasks.",
   "main": "server.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
   "prisma": {
     "seed": "node prisma/seed.js"
   },
@@ -13,6 +15,9 @@
     "prisma": "^5.21.0"
   },
   "dependencies": {
-    "@prisma/client": "^5.21.0"
+    "@prisma/client": "^5.21.0",
+    "express": "^4.21.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.1.7"
   }
 }
