@@ -1,0 +1,25 @@
+@host=http://localhost:3000
+
+### GET /tasks
+GET {{host}}/tasks
+
+### POST /tasks
+POST {{host}}/tasks
+Content-Type: application/json
+
+{
+    "name": "Go grocery shopping",
+    "done": false
+}
+
+### PUT /tasks/:id
+PUT {{host}}/tasks/1
+Content-Type: application/json
+
+{
+    "name": "Go grocery shopping",
+    "done": true
+}
+
+### DELETE /tasks/:id
+DELETE {{host}}/tasks/1

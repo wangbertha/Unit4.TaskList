@@ -8,6 +8,9 @@ app.use(require("morgan")("dev"));
 // Parses incoming JSON into request body
 app.use(express.json());
 
+// Routing for /tasks
+app.use("/tasks", require("./api/tasks"));
+
 // No endpoint match
 app.use((req, res, next) => {
     next({ status: 404, message: "Endpoint not found :("});
