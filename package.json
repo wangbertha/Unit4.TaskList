@@ -4,6 +4,15 @@
   "description": "This backend allows users to manage their workload. After making an account, a user will be able to create, read, update, and delete their tasks.",
   "main": "server.js",
   "scripts": {},
+  "prisma": {
+    "seed": "node prisma/seed.js"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "prisma": "^5.21.0"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.21.0"
+  }
 }
