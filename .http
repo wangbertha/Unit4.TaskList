@@ -1,5 +1,23 @@
 @host=http://localhost:3000
 
+### POST /register
+POST {{host}}/register
+Content-Type: application/json
+
+{
+    "username": "mary",
+    "password": "foo"
+}
+
+### POST /login
+POST {{host}}/login
+Content-Type: application/json
+
+{
+    "username": "mary",
+    "password": "foo"
+}
+
 ### GET /tasks
 GET {{host}}/tasks
 

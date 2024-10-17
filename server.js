@@ -2,11 +2,17 @@ const express = require("express");
 const app = express();
 const PORT = 3000;
 
+// Allows Express App to access .env
+require("dotenv").config();
+
 // Logs request to console
 app.use(require("morgan")("dev"));
 
 // Parses incoming JSON into request body
 app.use(express.json());
+
+// Routing for auth-related endpoints /register and /login
+app.use(require("./api/auth"));
 
 // Routing for /tasks
 app.use("/tasks", require("./api/tasks"));
