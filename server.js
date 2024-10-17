@@ -12,7 +12,7 @@ app.use(require("morgan")("dev"));
 app.use(express.json());
 
 // Routing for auth-related endpoints /register and /login
-app.use(require("./api/auth"));
+app.use(require("./api/auth").router);
 
 // Routing for /tasks
 app.use("/tasks", require("./api/tasks"));
